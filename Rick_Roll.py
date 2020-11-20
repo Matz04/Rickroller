@@ -3,10 +3,12 @@ import webbrowser
 from tkinter import messagebox
 import pyautogui
 import random
+import os
+import sys
 
 root = Tk()
 root.title("Rickroll.exe")
-root.iconbitmap(bitmap="download.ico")
+root.iconbitmap(bitmap=os.path.basename(sys.argv[0]))
 root.overrideredirect(1)
 root.attributes("-topmost", True)
 
@@ -33,6 +35,5 @@ def Roll_loop():
 Button(root, text ="Click Me!!!", command = Rick_roll, height=5, width=10, bg="#E50000", fg="white", font="Helvetica 24 bold").pack()
 
 root.after(100, Position)
-
 
 root.mainloop()
